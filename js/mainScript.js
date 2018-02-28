@@ -16,8 +16,8 @@ var material = new THREE.MeshNormalMaterial( );
 
 
 
-camera.position.z = 5;
-camera.position.y = -0.1;
+camera.position.z = 15;
+camera.position.y = 10;
 
 var animate = function () {
 	requestAnimationFrame( animate );
