@@ -50,6 +50,7 @@ var cubeRotate = function(inputCube){
 	inputCube.rotation.y += 0.01;
 }
 
+addCube(cubeArray);
 animate();
             
 /**======= web control ========**/
