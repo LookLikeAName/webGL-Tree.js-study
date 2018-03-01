@@ -33,9 +33,9 @@ var animate = function () {
 
 var addCube = function(inputCubeArray){
     var cube = new THREE.Mesh( geometry, material );
-    cube.position.x=Math.random()*(Math.random()*10)*(Math.random()>0.5?1:-1);
-    cube.position.y=Math.random()*(Math.random()*10)*(Math.random()>0.5?1:-1);
-    cube.position.z=Math.random()*(Math.random()*10)*(Math.random()>0.5?1:-1);
+    cube.position.x=(Math.random()+0.1)*(Math.random()*10+1)*(Math.random()>0.5?1:-1);
+    cube.position.y=(Math.random()+0.1)*(Math.random()*10+1)*(Math.random()>0.5?1:-1);
+    cube.position.z=(Math.random()+0.1)*(Math.random()*10+1)*(Math.random()>0.5?1:-1);
     inputCubeArray.push(cube);
     scene.add( inputCubeArray[inputCubeArray.length-1] );
 }
@@ -48,6 +48,16 @@ var deleteCube = function(inputCubeArray){
 var cubeRotate = function(inputCube){
     inputCube.rotation.x += 0.01;
 	inputCube.rotation.y += 0.01;
+}
+
+var  rangeRandom=function(start,end){
+    if(start>end){
+        var temp;
+        temp=start;
+        start=end;
+        end=temp;
+    }
+   return Math.random()*(end-start)+start;
 }
 
 addCube(cubeArray);
